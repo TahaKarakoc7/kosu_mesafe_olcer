@@ -15,6 +15,7 @@
             int toplamSureDakika = 0;
             double toplamMesafe = 0;
 
+           
             // Kullanıcıdan her bölüm için süre ve mesafe bilgilerini al
             for (int i = 0; i < bolumSayisi; i++)
             {
@@ -48,6 +49,8 @@
             SonuclariYazdir(bolumSureleri, bolumMesafeleri, toplamSureDakika, toplamMesafe);
         }
 
+
+
         // Bölüm sayısını kullanıcıdan alma metodu
         static int BolumSayisiniAl()
         {
@@ -66,6 +69,8 @@
 
             return bolumSayisi;
         }
+
+
 
         // Koşu süresi (saat ve dakika olarak) alma metodu
         static int KosuSuresiAl()
@@ -103,6 +108,8 @@
             return (saat * 60) + dakika;
         }
 
+
+
         // Adım boyunu kullanıcıdan alma metodu
         static double AdimBoyuAl()
         {
@@ -120,6 +127,8 @@
 
             return adimBoyu / 100; // Santimetreden metreye çevirme
         }
+
+
 
         // Adım sayısını kullanıcıdan alma metodu
         static int AdimSayisiAl()
@@ -139,11 +148,14 @@
             return adimSayisi;
         }
 
+
+
         // Mesafeyi hesaplama metodu
         static double HesaplaMesafe(double adimBoyu, int adimSayisi, int kosuSureDakika)
         {
             return adimBoyu * adimSayisi * kosuSureDakika;
         }
+
 
         // Sonuçları yazdırma metodu
         static void SonuclariYazdir(List<int> bolumSureleri, List<double> bolumMesafeleri, int toplamSureDakika, double toplamMesafe)
@@ -175,6 +187,8 @@
                 }
             }
 
+
+
             // Tüm bölümlerin toplam süresi ve mesafesi hesaplanıp ekrana yazdırılır.
             int toplamSureSaat = toplamSureDakika / 60;  // Toplam süreyi saat cinsine çevirir.
             int kalanDakika = toplamSureDakika % 60;  // Toplam sürenin saat kısmından arta kalan dakikayı hesaplar.
@@ -182,7 +196,9 @@
             // Toplam mesafeyi kilometre cinsinden hesapla
             double toplamMesafeKm = toplamMesafe / 1000; // Metreden kilometreye çevirir
            
+
             Console.WriteLine("\n-------------------------------------------------");
+
 
             // Kilometre değerinin virgülle ayrılmasını sağlar
             Console.WriteLine($"Toplam koşu süresi: {toplamSureSaat} saat {kalanDakika} dakika");
