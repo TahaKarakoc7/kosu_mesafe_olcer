@@ -10,7 +10,7 @@
             // Her bir bölüm için süre ve mesafe bilgilerini tutacak listeler
             List<int> bolumSureleri = new List<int>();
             List<double> bolumMesafeleri = new List<double>();
-
+            
             // Toplam süre ve mesafe hesaplamaları için değişkenler
             int toplamSureDakika = 0;
             double toplamMesafe = 0;
@@ -181,6 +181,8 @@
 
             // Toplam mesafeyi kilometre cinsinden hesapla
             double toplamMesafeKm = toplamMesafe / 1000; // Metreden kilometreye çevirir
+           
+            Console.WriteLine("\n-------------------------------------------------");
 
             // Kilometre değerinin virgülle ayrılmasını sağlar
             Console.WriteLine($"Toplam koşu süresi: {toplamSureSaat} saat {kalanDakika} dakika");
